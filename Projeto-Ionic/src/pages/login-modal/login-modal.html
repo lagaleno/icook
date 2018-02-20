@@ -1,0 +1,42 @@
+<!--
+  Generated template for the LoginModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Acesse sua Conta</ion-title>
+    <ion-buttons end>
+    	<button ion-button (click)="closeLoginModal()">Fechar</button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fundo">
+  
+  <div class="componentesModal">
+    <h5 class="titulo"> Acesse sua Conta: </h5>
+  	<form>
+      <ion-item>
+	        <ion-label>E-mail</ion-label>
+	        <ion-input #email type="email" name="email"></ion-input>
+      	</ion-item>
+      	<ion-item>
+	        <ion-label>Senha</ion-label>
+	        <ion-input #password type="password" name="password"></ion-input>
+      	</ion-item>
+      <button ion-button (click)="login(email.value, password.value)" full type="submit" color="danger" class="submit" block>Entrar</button> <!-- Chamo a função do meu login-modal.ts -->
+    </form>
+    <button ion-button (click)="presentCadastroModal()" block outline class="texto-botao">Não tem conta? Cadastre-se!</button>
+    
+    <div *ngIf="avisoErro">
+      <p class="erro-texto"> E-mail ou senha invalidos </p>
+    </div>
+  </div>
+
+</ion-content>

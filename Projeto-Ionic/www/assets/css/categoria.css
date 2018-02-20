@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lobster');
+
+.searchbar-ios {
+	background: #E3A723 !important;
+}
+
+.searchbar-md {
+	background-color: #E3A723 !important; 
+}
+
+.logo {
+	font-size: 5em;
+	font-family: Lobster;
+	text-align: center;
+}
+
+.card-image {
+	position: relative;
+}
+
+.card-title-image {
+	font-family: Lobster;
+	text-align: center;	
+	position: absolute;
+	top: 36%;
+	font-size: 3.0em;
+	width: 100%;
+	font-weight: bold;
+	color: #BD322B;
+}
+
+.card-subtitle-image {
+	font-family: Montserrat;
+	text-align: center;
+	font-size: 1.0em;
+	position: absolute;
+	top: 52%;
+	width: 100%;
+	color: #E1E7E8;
+}
+
+.card-subtitle-image-botao {
+	position: absolute;
+	top: 1%;
+	width: 15%;
+	color: #fff;
+}
+
+
+.tituloLongo {
+	font-family: Lobster;
+	color: #37646F;
+	font-size: 3em;
+	text-align: center;
+}
+
+.dificuldade {
+	margin-top: 8vh;
+	margin-bottom: 10vh;
+}
+
+.rendimento {
+	margin-bottom: 10vh;
+}
+
+.tempo {
+	margin-bottom: 10vh;
+}
+
+.busca {
+
+}
+
+.lista {
+	margin-top: 5vh;
+	background-color: #E1E7E8 !important;
+}
+
+.topicos {
+	color: #37646F;
+	font-family: Lobster;
+	font-size: 1.5em;
+}
+
+.opa {
+	text-align: center;
+	font-size: 3.5em;
+	font-family: Lobster;
+	color: #37646F;
+}
+
+.tituloReceita {
+	font-size: 2em;
+	font-family: Lobster;
+	color: #37646F;
+	text-align: center;
+
+}
+
+.erro-texto {
+	text-align: center;
+	color: #BD322B !important;
+	font-family: Montserrat;
+	font-size: 1.8em;
+}
+

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+    Lista de Receitas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+	
+	<h5 class="tituloLongo"> Veja as receitas Tops nas Categorias: </h5>
+
+	<div class="dificuldade">
+		<button ion-button (click)="openListaDificuldade()" block icon-right color="danger" class="texto-botao">Dificuldade<ion-icon name="md-hammer"></ion-icon></button>
+	</div>
+
+	<div class="rendimento">
+		<button ion-button (click)="openListaRendimento()" block icon-right color="secondary" class="texto-botao">Rendimento<ion-icon name="md-beaker"></ion-icon></button>
+	</div>
+
+	<div class="tempo">
+		<button ion-button (click)="openListaTempo()" block icon-right color="primary" class="texto-botao">Tempo<ion-icon name="md-alarm"></ion-icon></button>
+	</div>
+
+	<div class="busca">
+		<button ion-button (click)="openBuscaIngredientes()" block icon-right class="texto-botao" style="background-color:#909090">Busque por ingredientes<ion-icon name="md-list"></ion-icon></button>
+	</div>
+
+</ion-content>

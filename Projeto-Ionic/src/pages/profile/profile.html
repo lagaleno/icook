@@ -1,0 +1,69 @@
+<ion-header color="secondary">
+ 	<ion-navbar color="secondary">
+		<ion-title>Meu Perfil</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="fundo">
+	
+	<div *ngIf="usuario.id">
+		<ion-list>
+	  		<ion-item>
+			    <h2 class="nome-perfil">{{ usuario.nome }}</h2>
+			    <p>Panqueca</p>
+	  		</ion-item>
+		</ion-list>
+
+
+		<div>
+
+			<button ion-button (click)="getToken()" block outline class="titulo">Minhas Receitas:</button>
+
+		  	<div *ngIf="receitas.length">
+
+				<ion-card class="card" *ngFor="let r of receitas">
+			  
+			  		<img src="assets/imgs/torta-alema.jpg"/>
+			  		<ion-card-content>
+			    		<ion-card-title>{{r.nome}}</ion-card-title>
+
+						<ion-row>
+							<ion-col width-50 style="text-align: right">
+			       				<button class="tam-botao" ion-button icon-right (click)="setReceitaEditar(r.id, r.nome, r.descricao, r.ingredientes, r.tempo_preparo, r.rendimento, r.dificuldade)">Editar<ion-icon name="md-create"></ion-icon></button>
+			     			</ion-col>  
+
+			     			<ion-col width-50 style="text-align: left">
+			      				<button class="tam-botao" ion-button icon-right color="danger" (click)="setReceitaDeletar(r.id, r.nome, r.descricao, r.ingredientes, r.tempo_preparo, r.rendimento, r.dificuldade)">Apagar<ion-icon name="md-trash"></ion-icon></button>
+			    			</ion-col>
+			 			</ion-row>
+
+			  		</ion-card-content>
+				</ion-card>
+			</div>
+
+			<div *ngIf="show">
+	   			<button ion-button (click)="goAddReceita()" block class="texto-botao" color="primary">
+	    			Adicione uma Receita!
+	    		</button>
+			</div>
+
+		</div>
+
+
+
+		<button ion-button block icon-right color="secondary" (click)="goFavoritos()" class="texto-botao">Lista de favoritos<ion-icon name="md-star"></ion-icon></button>
+
+
+		<button ion-button block outline icon-right color="danger" class="texto-botao">Sair<ion-icon name="md-exit"></ion-icon></button>
+	</div>
+
+	<div *ngIf="!usuario.id" class="componentesModal"> <!-- Não é cadastrado -->
+		<div class="componentesLoginModal">
+			<h5 class="opa">Opa!</h5>
+			<p style="text-align:center">Para fazer esta ação você precisa ser cadastrado e estar logado</p>
+		</div>
+
+		<button ion-button (click)="presentLoginModal()" block icon-right color="danger" class="texto-botao">Faça seu login ou cadastro!</button>
+	</div>
+</ion-content>

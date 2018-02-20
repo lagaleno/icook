@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lobster');
+
+
+p {
+	font-family: Montserrat;
+}
+
+form {
+	font-family: Montserrat;
+}
+
+ion-slide img {
+	width: 100vw !important;
+	height: 50vh !important;
+}
+
+
+ion-card-title {
+	font-family: Lobster;
+	font-size: 2.3em !important;
+	color: #37646F !important;
+	text-align: center;
+
+}
+
+
+/* CLASSES */
+.fundo {
+	background-color: #E1E7E8; 
+}
+
+.nome-perfil {
+	font-family: Lobster;
+	font-size: 2em !important;
+	color: #37646F;
+}
+
+.titulo {
+	font-family: Lobster;
+	font-size: 3.4em;
+	color: #37646F;
+	text-align: center;
+}
+
+.texto-botao {
+	font-family: Montserrat;
+}
+
+.tam-botao {
+	width: 36vw;
+	font-family: Montserrat;
+
+}
+
+
+.card {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	width: calc(100% - 0px);
+}
+
+.componentesModal {
+	margin-top: 15vh;
+}
+
+.componentesLoginModal {
+	margin-top: 5vh;
+}
+
+.submit {
+	margin-top:4vh !important;
+	font-family: Montserrat;
+
+}
+
+.titulo-card {
+	font-family: Lobster;
+	color: #37646F;
+	font-size: 2em;
+
+}
+
+.space {
+	margin-top: 5vh;
+}
+
+.botao-anexar {
+	margin-bottom: 2vh;
+	font-family: Montserrat;
+	text-align: center;
+
+}

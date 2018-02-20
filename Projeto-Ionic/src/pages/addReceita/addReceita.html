@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+    Adicione uma Receita
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+  <div *ngIf="usuario.id">
+    <h5 class="titulo"> 
+      Envie sua Receita 
+    </h5>
+
+  	<form class="space">
+  		<ion-item>
+  	    <ion-label>Título</ion-label>
+  	     <ion-input #nome type="text"name="name" placeholder="Nome da Receita"></ion-input>
+      </ion-item>
+
+      	<ion-item>
+  	        <ion-label>Descrição</ion-label>
+  	        <ion-textarea #descricao type="textearea" name="descricao"></ion-textarea>
+        	</ion-item>
+
+        	<ion-item>
+  	        <ion-label>Ingredientes</ion-label>
+  	        <ion-textarea #ingredientes type="textarea" name="ingredientes"></ion-textarea>
+        	</ion-item>
+
+          <ion-item>
+            <ion-label>Tempo em min</ion-label>
+            <ion-input #tempoPreparo type="text" name="tempo" plceholder="Somente número"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Rendimento</ion-label>
+            <ion-input #rendimento type="text" name="rendimento" placeholder="Somente número"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Dificuldade</ion-label>
+            <ion-input #dificuldade type="text" name="dificuldade" placeholder="1 (fácil) - 10 (difícil)"></ion-input>
+          </ion-item>
+
+        	<button ion-button class="botao-anexar" color="primary" float-center>Anexar imagem</button>
+
+        	<button ion-button (click)="insereReceita(nome.value, descricao.value, ingredientes.value, tempoPreparo.value, rendimento.value, dificuldade.value)" block class="texto-botao" color="danger">Enviar Receita!
+          </button>
+
+    </form>
+  </div>
+
+  <div *ngIf="!usuario.id" class="componentesModal"> <!-- Não é cadastrado -->
+    <div class="componentesLoginModal">
+      <h5 class="opa">Opa!</h5>
+      <p style="text-align:center">Para fazer esta ação você precisa ser cadastrado e estar logado</p>
+    </div>
+
+    <button ion-button (click)="presentLoginModal()" block icon-right color="danger" class="texto-botao">Faça seu login ou cadastro!</button>
+  </div>
+
+  <div *ngIf="avisoErro">
+    <p class="erro-texto"> Essa receita já existe, coloque outro nome </p>
+  </div>
+</ion-content>

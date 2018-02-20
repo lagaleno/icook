@@ -1,0 +1,38 @@
+.background-show {
+    background-image: url("/images/configs/background-img.jpg");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.tamanho-img{
+  width: 1000px;
+  height: 500px;
+}
+.separated-divs{
+  border-color: blue;
+  padding-top: 50px;
+}
+
+.pos-txt-principal{
+    padding-top: 20% ;
+    padding-bottom: 20%;
+
+
+}
+
+.cor-txt-principal {
+    font-size: 10px;
+    margin-bottom: 30px;
+    color:black;
+}
+
+.box-size{
+  height: 200px;
+  width: 500px;
+}
+
+.box-padding{
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}

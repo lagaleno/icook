@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Página Inicial</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+  
+  <h1 class="logo"><span style="color:#BD322B">i</span><span style="color:#1B2B32">Cook</span> </h1>
+
+  <h5 class="tituloLongo"> As mais recentes </h5>
+
+  <div *ngIf="recentes">
+    <ion-card class="card-image" *ngFor="let r of recentes" (click)="goReceita(r.id, r.nome, r.descricao, r.ingredientes, r.tempo_preparo, r.rendimento, r.dificuldade)">
+      <img src="../assets/imgs/torta-alema.jpg"/>
+      <div class="card-title-image">{{r.nome}}</div>
+      <div class="card-subtitle-image">{{r.nome}}</div>
+    </ion-card>
+  </div>
+
+</ion-content>

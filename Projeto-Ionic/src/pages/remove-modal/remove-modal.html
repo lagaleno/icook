@@ -1,0 +1,35 @@
+<!--
+  Generated template for the RemoveModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Apagar Receita</ion-title>
+    <ion-buttons end>
+    	<button ion-button (click)="closeRemoveModal()">Fechar</button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fundo">
+	
+	<div class="componentesModal">
+		<h5 class="titulo">Tem certeza?</h5>
+		<p style="text-align:center"> A receita <span style="color:#BD322B">{{ receita.nome }}</span> será deletada do aplicativo, quer continuar com essa ação?</p>
+	</div>
+
+	<ion-row>
+		<ion-col width-50 style="text-align: right">
+       		<button ion-button class="texto-botao" (click)="closeRemoveModal()">Não apagar</button>
+     	</ion-col>     
+     	<ion-col width-50 style="text-align: left">
+      		<button ion-button  (click)="deletaReceitaPerfil()" class="texto-botao" color="danger">Apagar</button>
+    	</ion-col>
+ 	</ion-row>
+
+</ion-content>
