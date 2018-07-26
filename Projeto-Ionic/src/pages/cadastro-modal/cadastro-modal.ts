@@ -18,6 +18,7 @@ import { UsuarioProvider } from '../../providers/usuario/usuario'; //Provider pa
 export class CadastroModalPage {
 
   avisoErro: boolean;
+  erroEmail: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public view: ViewController, 
     public userProv: UsuarioProvider) {
@@ -41,7 +42,8 @@ export class CadastroModalPage {
         this.view.dismiss(); //Após fazer o cadastro voltar para página de login
       },(error)=>{
         this.avisoErro = true;
-        console.log(error);
+        this.erroEmail = error.error.errors.email[0];
+        console.log(error.error);
       }
     );
   }
